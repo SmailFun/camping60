@@ -1,0 +1,28 @@
+.title {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    color: #434343 !important;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.title2 {
+    overflow-x: hidden;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    color: #757575;
+    font-family: 'Lato', sans-serif;
+    background: #f9f9f9;
+}
+.lead2 {
+    font-weight: 400;
+    font-size: 19px;
+    letter-spacing: 0.3px;
+    color: #999;
+}
+
