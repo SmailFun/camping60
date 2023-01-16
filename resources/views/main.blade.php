@@ -1,18 +1,20 @@
 @extends('layouts.appMain')
 
-@section('tittle') Branko @endsection
+@section('tittle')
+    Branko
+@endsection
 @section('contentMain')
-<div>
+    <div>
 
-    @include('inc.sliderMainPage')
-    @include('inc.animatedText')
-    @include('inc.textWithWomen')
-    <div class="light-wrapper">
-    @include('inc.photoGalery')
+        @include('inc.main.sliderMainPage')
+        @include('inc.main.animatedText')
+        @include('inc.main.textWithWomen')
+        <div class="light-wrapper">
+            @include('inc.main.photoGalery')
+        </div>
+        @include('inc.main.video')
+        @include('inc.main.news')
+        @include('inc.main.aboutCompanyMain')
+        @include('inc.main.modelProcess')
     </div>
-    @include('inc.video')
-    @include('inc.news')
-    @include('inc.aboutCompanyMain')
-    @include('inc.modelProcess')
-</div>
 @endsection

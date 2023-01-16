@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', function () {
     return view('admin');
 });
+
 Route::get('/', function () {
     return view('main');
 });
 Route::get('/incubation', function () {
-    return view('incubation');
+    return view('incub');
 });
 Route::get('/contacts', function () {
     return view('contacts');
@@ -37,4 +39,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+  Route::post('/adminh', [SliderController::class, 'form'])->name('form');
 require __DIR__.'/auth.php';

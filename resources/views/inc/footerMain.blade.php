@@ -29,7 +29,7 @@
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Инкубирование</a></li>
                 <li><a href="#">Контакты</a></li>
-                <li><a href="#">Войти</a></li>
+                <li><a href="/login">Войти</a></li>
             </ul>
         </div>
         <!-- .container -->
