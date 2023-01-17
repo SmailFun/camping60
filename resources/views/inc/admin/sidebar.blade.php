@@ -61,28 +61,28 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="forms" data-parent="#accordionExample">
                     <li>
-                        <a href=""> Верхний слайдер </a>
+                        <a href="/slider"> Верхний слайдер </a>
                     </li>
                     <li>
-                        <a href="form_input_group_basic.html"> Анимированный текст </a>
+                        <a href="/anim"> Анимированный текст </a>
                     </li>
                     <li>
-                        <a href="form_layouts.html"> Экскурсия </a>
+                        <a href="/excurtion"> Экскурсия </a>
                     </li>
                     <li>
-                        <a href="form_validation.html"> Галерея </a>
+                        <a href="/galery"> Галерея </a>
                     </li>
                     <li>
-                        <a href="form_input_mask.html"> Видео </a>
+                        <a href="/video"> Видео </a>
                     </li>
                     <li>
-                        <a href="form_bootstrap_select.html"> Новости </a>
+                        <a href="/news"> Новости </a>
                     </li>
                     <li>
-                        <a href="form_select2.html"> О компании </a>
+                        <a href="/company"> О компании </a>
                     </li>
                     <li>
-                        <a href="form_bootstrap_touchspin.html"> Диаграмы </a>
+                        <a href="/diogram"> Диаграмы </a>
                     </li>
 
                 </ul>

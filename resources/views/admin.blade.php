@@ -1,6 +1,14 @@
 @extends('layouts.appAdmin')
 @section('content')
 
-    @include('inc.admin.redact.SliderMainPage')
+
+
+
+@endsection
+@section('style')
+
+@endsection
+
+@section('script')
 
 @endsection

@@ -13,8 +13,12 @@
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL STYLES -->
+
     <link href={{asset("assets/css/apps/mailing-chat.css")}} rel="stylesheet" type="text/css"/>
+
     <!-- END PAGE LEVEL STYLES -->
+    <!-- BEGIN CUSTOM STYLES -->
+    @yield('style')
 
 </head>
 <body>
@@ -32,7 +36,7 @@
 <script src={{asset("bootstrap/js/bootstrap.min.js")}}></script>
 <script src={{asset("plugins/perfect-scrollbar/perfect-scrollbar.min.js")}}></script>
 <script src={{asset("assets/js/app.js")}}></script>
-
+@yield('script')
 <script>
     $(document).ready(function () {
         App.init();

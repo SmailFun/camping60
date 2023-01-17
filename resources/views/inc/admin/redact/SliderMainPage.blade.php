@@ -25,7 +25,6 @@
                                             <div class="form-group">
                                                 <label for="t-text" class="sr-only">Text</label>
                                                 <input form="asd" id="t-text" type="text" name="textUp" placeholder="Заголовок..." class="form-control" required>
-
                                             </div>
                                         </form>
                                     </div>
