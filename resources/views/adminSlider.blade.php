@@ -23,7 +23,7 @@
 
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
-                                        <form method="post" id="asd" name="asd" action="{{ route('form') }}" >
+                                        <form method="post" id="asd" name="asd" action="{{ route('form') }}" enctype="multipart/form-data" >
                                             @csrf
                                             <div class="form-group">
                                                 <label for="t-text" class="sr-only">Text</label>
@@ -34,13 +34,13 @@
                                 </div>
 
                             </div>
-                        </div>
+
 
 
                         <div class="row layout-top-spacing">
 
                             <div id="basic" class="col-lg-12 layout-spacing">
-                                <div class="statbox widget box box-shadow">
+
                                     <div class="widget-header">
                                         <div class="row">
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -72,7 +72,7 @@
 
 
                                     <div class="col-lg-12 layout-spacing">
-                                        <div class="statbox widget box box-shadow">
+
                                             <div class="widget-header">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -111,21 +111,48 @@
                                                             </div>
                                                         </div>
 
-                                                    <input form="asd" type="file" name="photo" class="form-control-file" id="exampleFormControlFile1">
+                                                    <input form="asd" type="file" name="photo" class="form-control-file" id="exampleFormControlFile1" >
                                                     </div>
                                                 </div>
+                                                <button type="submit" class="mt-4 mb-4 btn btn-primary" form="asd"> отправить</button>
                                             </div>
-                                            <button type="submit" class="mt-4 mb-4 btn btn-primary" form="asd"> отправить</button>
-                                        </div>
-                                    </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-hover table-striped mb-4">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Заголовок</th>
+                                                            <th>подзагаловок</th>
+                                                            <th>ссылка</th>
+                                                            <th class="text-center">Превью фотографии</th>
+                                                            <th>Редактировать</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td><button class="mt-4 mb-4 btn btn-primary">редактировать</button></td>
+                                                        </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
                 </div>
+
             </div>
         </div>
+
 
 
 @endsection

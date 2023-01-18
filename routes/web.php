@@ -81,4 +81,5 @@ Route::middleware('auth')->group(function () {
   Route::post('/admin7', [DiogramController::class, 'diogram'])->name('diogram');
 
 
+
 require __DIR__.'/auth.php';
