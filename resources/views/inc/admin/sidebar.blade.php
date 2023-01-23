@@ -89,7 +89,7 @@
             </li>
 
             <li class="menu">
-                <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <a href="#incub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
                         <span>Инкубирование</span>
@@ -98,20 +98,20 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled" id="forms" data-parent="#accordionExample">
+                <ul class="collapse submenu list-unstyled" id="incub" data-parent="#accordionExample">
                     <li>
-                        <a href="form_bootstrap_basic.html"> Верхняя картинка </a>
+                        <a href="/"> Верхняя картинка </a>
                     </li>
                     <li>
-                        <a href="form_input_group_basic.html"> Текст </a>
+                        <a href="/"> Текст </a>
                     </li>
 
                 </ul>
             </li>
 
             <li class="menu">
-                <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
+                <a href="#contact" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="#contact">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
                         <span>Контакты</span>
                     </div>
@@ -119,12 +119,12 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled" id="forms" data-parent="#accordionExample">
+                <ul class="collapse submenu list-unstyled" id="contact" data-parent="#accordionExample">
                     <li>
-                        <a href="form_bootstrap_basic.html"> Карта </a>
+                        <a href=""> Карта </a>
                     </li>
                     <li>
-                        <a href="form_input_group_basic.html"> Форма </a>
+                        <a href=""> Форма </a>
                     </li>
 
 

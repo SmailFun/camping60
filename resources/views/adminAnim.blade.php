@@ -21,7 +21,7 @@
 
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
-                                        <form method="post" id="a1" name="a1" action="{{ route('anim') }}" >
+                                        <form method="POST" id="a1" name="a1" action="{{ route('anim') }}" >
                                             @csrf
                                             <div class="form-group">
                                                 <label for="t-text" class="sr-only">Text</label>
@@ -31,14 +31,12 @@
                                     </div>
                                 </div>
 
-                            </div>
                         </div>
 
 
-                        <div class="row layout-top-spacing">
 
-                            <div id="basic" class="col-lg-12 layout-spacing">
-                                <div class="statbox widget box box-shadow">
+
+
                                     <div class="widget-header">
                                         <div class="row">
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -65,7 +63,7 @@
                                     <div class="row layout-top-spacing">
 
                                         <div id="basic" class="col-lg-12 layout-spacing">
-                                            <div class="statbox widget box box-shadow">
+
                                                 <div class="widget-header">
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -88,15 +86,14 @@
                                                         </div>
                                                     </div>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row layout-top-spacing">
 
-                                    <div id="basic" class="col-lg-12 layout-spacing">
-                                        <div class="statbox widget box box-shadow">
+
+                                        </div>
+
+
+
+
+
                                             <div class="widget-header">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -117,12 +114,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row layout-top-spacing">
-                                        <div id="basic" class="col-lg-12 layout-spacing">
-                                            <div class="statbox widget box box-shadow">
+
+
+
                                                 <div class="widget-header">
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -142,14 +136,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
+
 
 
                                 </div>
                                 <div class="form-group mb-4">
-                                    <label for="exampleFormControlTextarea1">Текст левого параграфа</label>
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">Текст левого параграфа</div>
                                     <textarea form="a1" class="form-control" id="exampleFormControlTextarea1" name="textAL" rows="3"></textarea>
 
                                 </div>
