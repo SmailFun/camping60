@@ -9,6 +9,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VideoController;
+use App\Models\Anim;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 
@@ -36,8 +37,13 @@ Route::get('/slider/{id}/delete', [SliderController::class,'deleteForm'])->name(
 
 
 Route::get('/anim', function () {
-    return view('adminAnim');
+    return view('adminAnim',['data'=>Anim::all()]);
 });
+Route::get('/anim/{id}', [AnimeController::class, 'edit'])->name('animid');
+Route::post('/anim/{id}/update', [AnimeController::class, 'animedit'])->name('animidup');
+Route::get('/anim/{id}/delete', [AnimeController::class,'deleteAnim'])->name('deleteanim');
+
+
 Route::get('/excurtion', function () {
     return view('adminExcurtion');
 });
