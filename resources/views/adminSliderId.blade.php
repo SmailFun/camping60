@@ -109,7 +109,7 @@
                                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                                                 <h4>Изменить фотографию</h4>
 
-                                                             <img src="{{asset('storage/'.$data->photo)}}">
+                                                             <img width="250" height="200" src="{{asset('storage/'.$data->photo)}}">
 
                                                             </div>
                                                         </div>

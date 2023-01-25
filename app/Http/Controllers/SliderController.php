@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SliderRequest;
+use App\Models\Galery;
 use App\Models\Slider;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
@@ -57,20 +58,21 @@ class SliderController extends Controller
 
     public function formedit ($id, SliderRequest $request)
     {
-
         $data = Slider::find($id);
         $data['textUp'] = $request->input('textUp');
         $data ['textDown'] = $request->input('textDown');
         $data ['link'] = $request->input('link');
-
-
-
-        $data ['photo'] =
-            Storage::disk('public')->put('/images', $request['photo']);
+        if($request['photo']){
+            if($request['photo']!=$data['photo']){
+            Storage::disk('public')->delete('/images', $data['photo']);
+            $data ['photo'] =
+                Storage::disk('public')->put('/images', $request['photo']);
+            }
+        }
 
         $data->save();
 
-        return view('adminSlider');
+        return \redirect()->back();
     }
 
     public function deleteForm($id, Request $request)

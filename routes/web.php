@@ -10,6 +10,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VideoController;
 use App\Models\Anim;
+use App\Models\Cat;
+use App\Models\Excurtion;
+use App\Models\Galery;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 
@@ -45,11 +48,21 @@ Route::get('/anim/{id}/delete', [AnimeController::class,'deleteAnim'])->name('de
 
 
 Route::get('/excurtion', function () {
-    return view('adminExcurtion');
+    return view('adminExcurtion',['data'=>Excurtion::all()]);
 });
-Route::get('/galery', function () {
-    return view('adminGalery');
-});
+Route::get('/excurtion/{id}', [ExcurtionController::class, 'exedit'])->name('excurtionid');
+Route::post('/excurtion/{id}/update', [ExcurtionController::class, 'excurtionedit'])->name('excurtionup');
+Route::get('/excurtion/{id}/delete', [ExcurtionController::class,'deleteExcurtion'])->name('deleteexcurtion');
+
+
+/*Route::get('/galery', function () {
+    return view('adminGalery', );
+});*/
+Route::get('/galery', [GaleryController::class, 'index'])->name('galeryphonk');
+Route::get('/galery/{id}', [GaleryController::class, 'galedit'])->name('galeryid');
+
+
+
 Route::get('/video', function () {
     return view('adminVideo');
 });
@@ -92,6 +105,7 @@ Route::middleware('auth')->group(function () {
   Route::post('/admin2', [ExcurtionController::class, 'excurtion'])->name('excurtion');
 
   Route::post('/admin3', [GaleryController::class, 'galery'])->name('galery');
+Route::post('/admin8', [GaleryController::class, 'categorys'])->name('categorys');
 
   Route::post('/admin5', [VideoController::class, 'video'])->name('video');
 

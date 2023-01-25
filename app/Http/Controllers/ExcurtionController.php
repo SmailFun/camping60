@@ -6,18 +6,52 @@ use App\Models\Excurtion;
 use App\Models\Galery;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class ExcurtionController extends Controller
 {
-    public function Excurtion (Request $request)
+    public function excurtion(Request $request)
     {
-
-        $data  = new Galery();
+        $data = new Excurtion();
         $data['textUp'] = $request->textUp;
         $data ['textDown'] = $request->textDown;
-        $data ['photo'] = ($request->photo);
+        $data ['photo'] =
+            Storage::disk('public')->put('/images', $request['photo']);
+
         $data->save();
 
-        return back();
+        return view('adminExcurtion', ['data' => Excurtion::all()]);
+    }
+
+    public function exedit($id)
+    {
+        $excurtion = new Excurtion();
+
+
+        return view('adminExcurtionId', ['data' => $excurtion->find($id)]);
+    }
+
+    public function excurtionedit($id, Request $request)
+    {
+        $data = Excurtion::find($id);
+        $data['textUp'] = $request->input('textUp');
+        $data ['textDown'] = $request->input('textDown');
+        $data ['photo'] =
+            Storage::disk('public')->put('/images', $request['photo']);
+
+        $data->save();
+
+        return view('adminExcurtion');
+    }
+
+    public function deleteExcurtion($id, Request $request)
+    {
+        $delete = Excurtion::find($id);
+        Storage::disk('public')->delete('/images', $delete['photo']);
+        $delete->delete();
+
+
+        return Redirect::to('/excurtion');
     }
 }
