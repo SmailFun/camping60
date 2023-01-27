@@ -10,8 +10,7 @@
                 <div id="basic" class="col-lg-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
 
-
-                        <form method="POST" id="a1" name="a1" action="{{ route('galery') }}"
+                        <form method="POST" id="a1" name="a1" action="{{ route('galeryup',$data->id) }}"
                               enctype="multipart/form-data">
                         </form>
                         <div id="fs2Tagging" class="col-lg-12 layout-spacing">
@@ -38,6 +37,7 @@
 
                                                 </div>
                                             </div>
+
                                             <img width="250" height="200"
                                                  src="{{asset('storage/'.$data->photo)}}">
 

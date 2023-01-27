@@ -102,7 +102,9 @@ code { color: #e7515a; }
     border: 1px solid #e0e6ed;
     box-shadow: 0 0 40px 0 rgb(94 92 154 / 6%);
 }
-.layout-top-spacing { margin-top: 20px; }
+.layout-top-spacing { margin-top: 20px;
+
+}
 .layout-spacing { padding-bottom: 40px; }
 .layout-px-spacing { padding: 0 20px 0 20px!important; min-height: calc(100vh - 116px)!important; }
 .widget.box .widget-header {
@@ -159,7 +161,7 @@ code { color: #e7515a; }
 }
 
 
-/* 
+/*
 =====================
     Navigation Bar
 =====================
@@ -440,7 +442,7 @@ code { color: #e7515a; }
     color: #fff!important;
     background: #2196f3;
     top: 15px;
-    right: 2px;  
+    right: 2px;
 }
 .navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu {
     min-width: 15rem;
@@ -465,11 +467,11 @@ code { color: #e7515a; }
     margin-right: 9px;
     align-self: center;
 }
-.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .media.file-upload svg { 
+.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .media.file-upload svg {
     color: #e7515a;
     fill: rgba(231, 81, 90, 0.23921568627450981);
 }
-.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .media.server-log svg { 
+.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .media.server-log svg {
     color: #009688;
     fill: rgba(0, 150, 136, 0.3686274509803922);
 }
@@ -691,7 +693,7 @@ color: #e0e6ed; }
     fill: rgba(3, 3, 5, 0.039);
 }
 
-/* 
+/*
 ===============
     Sidebar
 ===============
@@ -726,11 +728,11 @@ color: #e0e6ed; }
     background: linear-gradient(
 180deg
 ,#030305 44%,#030305eb 73%,#2C303C00);
-    background: -webkit-linear-gradient( 
+    background: -webkit-linear-gradient(
 180deg
  ,#161621e0 44%,#161621e3 73%,#161621e3);
 
- background: -webkit-linear-gradient( 
+ background: -webkit-linear-gradient(
     180deg
      ,rgb(31, 31, 45) 44%,rgb(31, 31, 45) 73%,rgb(31, 31, 45));
 }
@@ -751,7 +753,7 @@ color: #e0e6ed; }
     border-bottom: 1px solid #161621;
     justify-content: space-between;
 }
-.sidebar-closed #sidebar .theme-brand { 
+.sidebar-closed #sidebar .theme-brand {
     padding: 17.14px 5px;
     justify-content: center; }
 .sidebar-closed > .sidebar-wrapper:hover #sidebar .theme-brand { justify-content: space-between; }
@@ -1098,7 +1100,7 @@ color: #e0e6ed; }
     animation-name: e-fadeInUp
 }
 
-/*  
+/*
     ======================
         Footer-wrapper
     ======================
@@ -1136,7 +1138,7 @@ color: #e0e6ed; }
 }
 
 
-/*  
+/*
     ======================
         MEDIA QUERIES
     ======================

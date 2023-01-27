@@ -1,184 +1,234 @@
 @extends('layouts.appAdmin')
 @section('content')
 
-
-
     <div id="content" class="main-content">
-        <div class="container">
+        <div class="mt-4  col-md-10 col-10 mx-auto">
+            <h1 align="center">Редактирование cлайдера</h1>
+        </div>
+
+
+
+        <div class="container ml-5 col-12-xl" >
 
             <div class="container">
 
-                <div class="row layout-top-spacing">
+                <div id="navSection" data-spy="affix" class="nav  sidenav">
+                    <div class="sidenav-content">
+                        <a href="#1" class="active nav-link">Верхний текст</a>
+                        <a href="#2" class="nav-link">Нижний текст</a>
+                        <a href="#3" class="nav-link">Сылка</a>
+                        <a href="#4" class="nav-link">Загрузить фотографию</a>
+                        <a href="#5" class="nav-link">Таблица</a>
+                    </div>
+                </div>
 
-                    <div id="basic" class="col-lg-12 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Верхний текст</h4>
-                                    </div>
+                <div class="row layout-top-spacing ">
+
+                    <div class="statbox widget box box-shadow">
+
+                        <div id="1" class="widget-header">
+                            <div class="row">
+                                <div class="mt-5 col-md-10 col-10 mx-auto">
+                                    <h3>Верхний текст</h3>
                                 </div>
                             </div>
-                            <div class="widget-content widget-content-area">
-
-                                <div class="row">
-                                    <div class="col-lg-6 col-12 mx-auto">
-                                        <form method="POST" id="asd" name="asd" action="{{ route('form','sliderid') }}" enctype="multipart/form-data" >
-                                            @csrf
-                                            <div class="form-group">
-                                                <label for="t-text" class="sr-only">Text</label>
-                                                <input form="asd" id="t-text" type="text" name="textUp" placeholder="Заголовок..." class="form-control" required>
-                                            </div>
-                                        </form>
-                                    </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="row">
+                                <div class="mt-2 col-md-8 col-10 mx-auto">
+                                    <form method="POST" id="asd" name="asd" action="{{ route('form','sliderid') }}"
+                                          enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="t-text" class="sr-only">Text</label>
+                                            <input form="asd" id="t-text" type="text" name="textUp"
+                                                   placeholder="Заголовок..." class="form-control" required>
+                                        </div>
+                                    </form>
                                 </div>
-
                             </div>
+                        </div>
 
+                        <div id="2" class="widget-header">
+                            <div class="row">
+                                <div class="mt-5 col-md-10 col-10 mx-auto">
+                                    <h3>Нижний текст</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
 
+                            <div class="row">
+                                <div class="mt-2 col-md-8 col-10 mx-auto">
 
-                        <div class="row layout-top-spacing">
-
-                            <div id="basic" class="col-lg-12 layout-spacing">
-
-                                    <div class="widget-header">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                <h4>Нижний текст</h4>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="t-text" class="sr-only">Text</label>
+                                        <input form="asd" id="t-text" type="text" name="textDown"
+                                               placeholder="Подзаголовок..." class="form-control" required>
                                     </div>
-                                    <div class="widget-content widget-content-area">
-
-                                        <div class="row">
-                                            <div class="col-lg-6 col-12 mx-auto">
-
-                                                <div class="form-group">
-
-                                                    <label for="t-text" class="sr-only">Text</label>
-                                                    <input form="asd" id="t-text" type="text" name="textDown" placeholder="Подзаголовок..." class="form-control" required>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-
-
-
-
-                                    <div class="col-lg-12 layout-spacing">
-
-                                            <div class="widget-header">
-                                                <div class="row">
-                                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                        <h4>Cсылка</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="widget-content widget-content-area">
-
-                                                <div class="row">
-
-                                                    <div class="col-lg-6 col-12 mx-auto">
-
-                                                        <div class="form-group">
-
-                                                            <label for="url-text" class="sr-only">Url</label>
-                                                            <input form="asd" name="link" placeholder="https://example.com" class="form-control" required>
-
-
-
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                            <div class="widget-content widget-content-area">
-
-                                                <div class="form-group mb-4 mt-3">
-                                                    <div class="widget-header">
-                                                        <div class="row">
-                                                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                <h4>Загрузить фотографию</h4>
-                                                            </div>
-                                                        </div>
-
-                                                    <input form="asd" type="file" name="photo" class="form-control-file" id="exampleFormControlFile1" >
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="mt-4 mb-4 btn btn-primary" form="asd" > отправить</button>
-                                            </div>
-                                                <div class="table-responsive">
-                                                    <table class="table table-bordered table-hover table-striped mb-4">
-                                                        <thead>
-                                                        <tr>
-                                                            <th>Заголовок</th>
-                                                            <th>подзагаловок</th>
-                                                            <th>ссылка</th>
-                                                            <th class="text-center">Превью фотографии</th>
-                                                            <th>Редактировать</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @foreach($data as $el)
-                                                                <tr>
-
-                                                                <td>{{ $el-> textUp }}</td>
-                                                                <td>{{ $el-> textDown }}</td>
-                                                                <td>{{ $el-> link }}</td>
-                                                                <td><img width="150" height="100" src="storage/{{($el-> photo)}}"></td>
-                                                                <td>
-                                                                    <a href="{{route('sliderid', $el->id)}}"><button  class="mt-4 mb-4 btn btn-primary">редактировать</button></a>
-                                                                    <a href="{{route('deleteslider', $el->id)}}">
-                                                                     <button   class="mt-4 mb-4 btn btn-primary">
-                                                                         <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                                               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 icon">
-                                                                             <polyline points="3 6 5 6 21 6"></polyline>
-                                                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                                             <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
-                                                                         </svg>
-                                                                     </button>
-                                                                    </a>
-                                                                </td>
-
-                                                                </tr>
-                                                            @endforeach
-
-
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                            </div>
 
                                 </div>
                             </div>
 
                         </div>
+
+
+                        <div id="3" class="widget-header">
+                            <div class="row">
+                                <div class="mt-5 col-md-10 col-10 mx-auto">
+                                    <h3>Cсылка</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+
+                            <div class="row">
+
+                                <div class="mt-2 col-md-8 col-10 mx-auto">
+
+                                    <div class="form-group">
+
+                                        <label for="url-text" class="sr-only">Url</label>
+                                        <input form="asd" name="link" placeholder="https://example.com"
+                                               class="form-control" required>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="4" class="widget-header">
+                            <div class="row">
+                                <div class="mt-5 col-md-10 col-10 mx-auto">
+                                    <h3>Загрузить фотографию</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="row">
+
+                                <div class="mt-2 col-md-8 col-10 mx-auto">
+
+                                        <div id="fuSingleFile" class="col-lg-12 layout-spacing">
+
+                                            <div class="widget-content widget-content-area">
+                                                <div class="custom-file-container" data-upload-id="myFirstImage">
+                                                    <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                                                    <label class="custom-file-container__custom-file" >
+                                                        <input type="file" name="photo" form="asd" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+                                                        <input type="hidden" name="photo"  form="asd" value="10485760" />
+                                                        <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                                    </label>
+                                                    <div class="custom-file-container__image-preview"></div>
+                                                </div>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="mt-4 col-md-10 col-10 mx-auto  btn btn-primary" form="asd">Отправить
+                                            </button>
+                                        </div>
+                                       </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-
             </div>
         </div>
+             <div class="container mt-5 ml-4">
 
+                        <div id="5" class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped mb-4">
+                                <thead>
+                                <tr>
+                                    <th>Заголовок</th>
+                                    <th>подзагаловок</th>
+                                    <th>ссылка</th>
+                                    <th class="text-center">Превью фотографии</th>
+                                    <th>Редактировать</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($data as $el)
+                                    <tr>
 
+                                        <td>{{ $el-> textUp }}</td>
+                                        <td>{{ $el-> textDown }}</td>
+                                        <td>{{ $el-> link }}</td>
+                                        <td><img width="150" height="100"
+                                                 src="storage/{{($el-> photo)}}"></td>
+                                        <td>
+                                            <a href="{{route('sliderid', $el->id)}}">
+                                                <button class="mt-4 mb-4 btn btn-primary">
+                                                    редактировать
+                                                </button>
+                                            </a>
+                                            <a href="{{route('deleteslider', $el->id)}}">
+                                                <button class="mt-4 mb-4 btn btn-primary">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                         width="24" height="24" viewBox="0 0 24 24"
+                                                         fill="none" stroke="currentColor"
+                                                         stroke-width="2" stroke-linecap="round"
+                                                         stroke-linejoin="round"
+                                                         class="feather feather-trash-2 icon">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                        <line x1="10" y1="11" x2="10"
+                                                              y2="17"></line>
+                                                        <line x1="14" y1="11" x2="14"
+                                                              y2="17"></line>
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+             </div>
+    </div>
 
 @endsection
 @section('style')
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href={{asset("assets/css/scrollspyNav.css")}} rel="stylesheet" type="text/css" />
+    <link href={{asset("bootstrap/css/bootstrap.min.css")}} rel="stylesheet" type="text/css" />
+    <link href={{asset("assets/css/plugins.css")}} rel="stylesheet" type="text/css" />
 
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href={{asset("plugins/file-upload/file-upload-with-preview.min.css")}} rel="stylesheet" type="text/css" />
+
+
+    <!-- END PAGE LEVEL STYLES -->
 @endsection
 
 @section('script')
+    <script src={{asset("assets/js/libs/jquery-3.1.1.min.js")}}></script>
+    <script src={{asset("bootstrap/js/popper.min.js")}}></script>
+    <script src={{asset("bootstrap/js/bootstrap.min.js")}}></script>
+    <script src={{asset("plugins/perfect-scrollbar/perfect-scrollbar.min.js")}}></script>
+    <script src={{asset("plugins/blockui/jquery.blockUI.min.js")}}></script>
+    <script src={{asset("assets/js/app.js")}}></script>
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+    <script src={{asset("plugins/highlight/highlight.pack.js")}}></script>
+    <script src={{asset("assets/js/custom.js")}}></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src={{asset("assets/js/scrollspyNav.js")}}></script>
+    <script src={{asset("plugins/file-upload/file-upload-with-preview.min.js")}}></script>
+    <script>
+        var firstUpload = new FileUploadWithPreview('myFirstImage')
 
+    </script>
 @endsection

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Branko-Admin panel</title>
-    <link rel="icon" type="image/x-icon" href={{asset("style/images/fav.svg")}}/>
+    <link rel="shortcut icon" type="image/x-icon" href={{asset("style/images/fav.svg")}}/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href={{asset("bootstrap/css/bootstrap.min.css")}} rel="stylesheet" type="text/css"/>
@@ -21,7 +21,7 @@
     @yield('style')
 
 </head>
-<body>
+<body class="sidebar-noneoverflow" data-spy="scroll" data-target="#navSection" data-offset="100">
 @include('inc.admin.navbar')
 <div class="main-container" id="container">
 

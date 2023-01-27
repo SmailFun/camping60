@@ -23,7 +23,6 @@ class SliderController extends Controller
        $Sliders= Slider::all();
 
        foreach ($Sliders as $key => $Slider){
-
        }
        return view();
     }
