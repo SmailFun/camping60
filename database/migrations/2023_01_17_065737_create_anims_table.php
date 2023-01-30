@@ -19,10 +19,11 @@ return new class extends Migration
             $table->string('textBig');
             $table->string('textPre');
             $table->string('animText');
+            $table->string('animText2');
             $table->string('textBigL');
             $table->string('textBigR');
-            $table->string('textAL');
-            $table->string('textAR');
+            $table->text('textAL');
+            $table->text('textAR');
 
         });
     }

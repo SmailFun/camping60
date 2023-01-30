@@ -22,4 +22,17 @@ class ContactController extends Controller
 
        return Redirect::to('/contacts');
    }
+
+
+   public function delete($id,Request $request)
+
+   {
+       $delete = Contact::find($id);
+       $delete->delete();
+
+       return Redirect::to('/clients');
+   }
+
+
+
 }

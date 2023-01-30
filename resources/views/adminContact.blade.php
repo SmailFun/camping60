@@ -27,29 +27,37 @@
                                         <h4 style="margin-left: 0;">Телефон</h4>
                                     </div>
                                     <div class="redact">
+                                        <h4 style="margin-left: 3px;">Сообщение</h4>
+                                    </div>
+                                    <div class="redact">
                                         <h4 style="margin-left: 3px;">Редактировать</h4>
                                     </div>
+
                                 </div>
                             </div>
-                            {{--@foreach($data->el)--}}
+                            @foreach($data as $el)
                             <div class="items">
                                 <div class="item-content">
                                     <div class="user-location">
                                         <div class="">
-                                            <p class="name">абвгд дгвба</p>
+                                            <p class="name">{{$el->name}}</p>
                                         </div>
                                     </div>
                                     <div class="user-email">
                                         <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="alan@mail.com">alan@mail.com</p>
+                                        <p class="usr-email-addr" >{{$el->email}}</p>
                                     </div>
                                     <div class="user-location">
                                         <p class="info-title">Тема: </p>
-                                        <p class="usr-location" data-theme="поддержка">Поддержка</p>
+                                        <p class="usr-location" >{{$el->department}}</p>
                                     </div>
                                     <div class="user-phone">
                                         <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="">+1 (070) 123-4567</p>
+                                        <p class="usr-ph-no" >{{$el->tel}}</p>
+                                    </div>
+                                    <div class="user-mes">
+                                        <p class="message"> </p>
+                                        <p class="usr-ph-no" >{{$el->message}}</p>
                                     </div>
                                     <div class="action-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
@@ -66,17 +74,18 @@
                                             <circle cx="25" cy="11.002" r="4"/>
                                         </svg>
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
+                                       <a href="{{route('delete',$el->id)}}"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
                                              xmlns:xlink="http://www.w3.org/1999/xlink" height="24"
                                              style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
                                              version="1.1" viewBox="0 0 32 32" width="24" xml:space="preserve"><path
                                                 d="M11.162,3l9.678,0c-0.405,-1.178 -1.523,-2.024 -2.838,-2.024l-4.002,-0c-1.315,-0 -2.433,0.846 -2.838,2.024Z"/>
                                             <path
                                                 d="M6.413,10.987l1.435,17.247c0.129,1.555 1.429,2.751 2.989,2.751l10.323,0c1.56,0 2.86,-1.196 2.989,-2.751l1.435,-17.247l1.411,0c1.105,0 2.002,-0.897 2.002,-2.002c0,0 0,-2.004 0,-2.004c0,-1.105 -0.897,-2.002 -2.002,-2.002l-21.982,0c-1.105,0 -2.002,0.897 -2.002,2.002c0,0 0,2.004 0,2.004c0,1.105 0.897,2.002 2.002,2.002l1.4,0Zm8.59,4.013l-0.003,-0c-1.656,-0 -3,1.344 -3,3c-0,1.656 1.344,3 3,3c0,0 2,-0 2,-0c0.552,-0 1,0.448 1,1c-0,0.552 -0.448,1 -1,1c-0,-0 -3,-0 -3,-0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l1.003,-0l0,1c0,0.552 0.449,1 1,1c0.552,0 1,-0.448 1,-1l0,-1c1.655,-0.002 2.997,-1.345 2.997,-3c-0,-1.656 -1.344,-3 -3,-3c-0,-0 -2,0 -2,0c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1l3,0c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1l-0.997,0l0,-1c0,-0.552 -0.448,-1 -1,-1c-0.551,0 -1,0.448 -1,1l0,1Z"/></svg>
+                                       </a>
                                     </div>
                                 </div>
                             </div>
-
+                            @endforeach
                         </div>
                     </div>
 
@@ -84,24 +93,6 @@
             </div>
         </div>
     </div>
-    <div class="footer-wrapper">
-        <div class="footer-section f-section-1">
-            <p class="">Copyright © 2021 <a target="_blank" href="https://designreset.com">DesignReset</a>, All rights
-                reserved.</p>
-        </div>
-        <div class="footer-section f-section-2">
-            <p class="">Coded with
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="feather feather-heart">
-                    <path
-                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-            </p>
-        </div>
-    </div>
-    </div>
-
 @endsection
 @section('style')
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">

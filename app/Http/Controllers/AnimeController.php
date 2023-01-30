@@ -24,6 +24,7 @@ class AnimeController extends Controller
         $data['textBig'] = $request->textBig;
         $data ['textPre'] = $request->textPre;
         $data ['animText'] = ($request->animText);
+        $data ['animText2'] = ($request->animText2);
         $data ['textBigL'] = ($request->textBigL);
         $data ['textBigR'] = ($request->textBigR);
         $data ['textAL'] = ($request->textAL);

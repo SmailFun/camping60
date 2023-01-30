@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Anim extends Model
 {
     use HasFactory;
+
+
+
+
 }

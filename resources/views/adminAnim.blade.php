@@ -52,7 +52,7 @@
                                                 <div class="form-group">
 
                                                     <label for="t-text" class="sr-only">Text</label>
-                                                    <input form="a1" id="t-text" type="text" name="textPre"  class="form-control" required>
+                                                    <input form="a1" id="t-text" type="text" name="textPre"  class="form-control" >
 
                                                 </div>
 
@@ -85,6 +85,31 @@
 
                                                         </div>
                                                     </div>
+                                                    <div class="row layout-top-spacing">
+
+                                                        <div id="basic" class="col-lg-12 layout-spacing">
+
+                                                            <div class="widget-header">
+                                                                <div class="row">
+                                                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                        <h4>Текст анимационный 2</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget-content widget-content-area">
+
+                                                                <div class="row">
+                                                                    <div class="col-lg-6 col-12 mx-auto">
+
+                                                                        <div class="form-group">
+
+                                                                            <label for="t-text" class="sr-only">Text</label>
+                                                                            <input form="a1" id="t-text" type="text" name="animText2"  class="form-control">
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
 
 
 

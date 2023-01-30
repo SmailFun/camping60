@@ -40,8 +40,8 @@
                                 <label class="custom-select">
                                     <select  name="department" required="required">
                                         <option value="">Выберите тему</option>
-                                        <option value="Sales">Сотрудничество</option>
-                                        <option value="Marketing">Поддержка</option>
+                                        <option value="Сотрудничество">Сотрудничество</option>
+                                        <option value="Поддержка">Поддержка</option>
 
                                     </select>
                                     <i class="icon-ok"></i><span><!-- fake select handler --></span> </label>

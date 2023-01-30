@@ -10,9 +10,11 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ViewController;
 use App\Models\Anim;
 use App\Models\Cat;
 use App\Models\Company;
+use App\Models\Contact;
 use App\Models\Diogram;
 use App\Models\Excurtion;
 use App\Models\Galery;
@@ -36,8 +38,11 @@ Route::get('/admin', function () {
     return view('admin');
 });
 Route::get('/clients', function () {
-    return view('adminContact');
+    return view('adminContact',['data'=>Contact::all()]);
 });
+Route::get('/clients/{id}/delete',[ContactController::class, 'delete'])->name('delete');
+
+
 Route::get('/slider', function () {
     return view('adminSlider',['data'=>Slider::all()]);
 });
@@ -106,7 +111,7 @@ Route::get('/diogram/{id}/delete', [DiogramController::class,'deleteDiogram'])->
 
 
 Route::get('/', function () {
-    return view('main');
+    return view('main',[ViewController::class, 'index']);
 });
 Route::get('/incubation', function () {
     return view('incub');
