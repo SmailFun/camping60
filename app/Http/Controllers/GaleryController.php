@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Cat;
 use App\Models\Galery;
+use http\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
 class GaleryController extends Controller
@@ -29,6 +31,7 @@ class GaleryController extends Controller
 
     public function categorys(Request $request)
     {
+
         $data1 = new Cat();
         $data1 ['category'] = $request->category;
 
@@ -38,16 +41,22 @@ class GaleryController extends Controller
 
     public function galedit($id)
     {
-        $data = Galery::find($id);
-        $galery = Cat::with('cat')->get();
-        return view('adminGaleryId', ['data' => $data->find($id)], ['categories' => $galery]);
+
+        $data = Cat::all();
+        $photo = Galery::find($id);
+
+        return view('adminGaleryId',
+            [
+                'data' => $data,
+                'photo' => $photo,
+            ]
+        );
     }
 
     public function gqedit($id, Request $request)
     {
-        dd(123123);
-        $data = Cat::with('cat')->get();
-        $data1 = Galery::find($id);
+
+        $data = Galery::find($id);
         $data ['cat_id'] = $request->cat_id;
         if ($request['photo']) {
             if ($request['photo'] != $data['photo']) {
@@ -59,7 +68,28 @@ class GaleryController extends Controller
 
         $data->save();
 
-        return view('adminGalery', ['data' => Cat::with('cat')->get()],[  'data1' => Galery::find($id)]);
+        return redirect()->route('galeryphonk');
+    }
+
+    public function deletephot($id)
+    {
+        $delete =  Galery::find($id);
+        Storage::disk('public')->delete('/images', $delete['photo']);
+        $delete->delete();
+
+
+        return Redirect::to('/mp/galery');
+
+    }
+
+    public function deletepcat($id)
+    {
+        $delete =  Cat::find($id);
+        $delete->delete();
+
+
+        return Redirect::to('/mp/galery');
+
     }
 
 

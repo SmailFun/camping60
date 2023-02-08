@@ -1,5 +1,6 @@
 <div class="light-wrapper">
     <div class="container inner">
+        @foreach($data3 as $el)
         <div class="section-title text-center">
             <h3 class="title">Новости</h3>
         </div>
@@ -12,17 +13,18 @@
                         <div class="row">
                             <div class="col-sm-3 col-md-5">
                                 <figure>
-                                    <img src="https://brankorus.ru/storage/images/Xnwtoh0hBjsUWsW8S2fKnBusKnox3AQOLThhVAN0.jpg" alt="">
+                                    <img src="storage/{{($el-> photo)}}" alt="">
                                 </figure>
                             </div>
                             <div class="col-sm-9 col-md-7">
-                                <h4 class="title">Основание компании</h4>
-                                <p class="title2">Акционерное общество Branko Nitra было основано в 1993 году путем преобразования совместного предприятия Agrokombinát BRANKO NITRA</p>
+                                <h4 class="title">{{$el->textUp}}</h4>
+                                <p class="title2">{{$el->textDown}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>

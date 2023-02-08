@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('dio2');
             $table->string('dio3');
             $table->string('dio4');
-            $table->string('textAL');
+            $table->text('textAL');
         });
     }
 

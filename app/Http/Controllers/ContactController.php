@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderShipped;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 
 class ContactController extends Controller
@@ -19,6 +21,8 @@ class ContactController extends Controller
 
 
        $data->save();
+
+       Mail::to('example@yandex.com')->send(new OrderShipped());
 
        return Redirect::to('/contacts');
    }

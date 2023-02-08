@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Branko-Admin panel</title>
     <link rel="shortcut icon" type="image/x-icon" href={{asset("style/images/fav.svg")}}/>
+    <link href={{asset("assets/css/loader.css")}} rel="stylesheet" type="text/css" />
+    <script src={{asset("assets/js/loader.js")}}></script>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href={{asset("bootstrap/css/bootstrap.min.css")}} rel="stylesheet" type="text/css"/>
@@ -15,7 +17,8 @@
     <!-- BEGIN PAGE LEVEL STYLES -->
 
     <link href={{asset("assets/css/apps/mailing-chat.css")}} rel="stylesheet" type="text/css"/>
-
+    <link href={{asset("plugins/apex/apexcharts.css")}} rel="stylesheet" type="text/css">
+    <link href={{asset("assets/css/dashboard/dash_1.css")}} rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN CUSTOM STYLES -->
     @yield('style')
@@ -47,5 +50,8 @@
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src={{asset("assets/js/apps/mailbox-chat.js")}}></script>
+<script src={{asset("plugins/apex/apexcharts.min.js")}}></script>
+<script src={{asset("assets/js/dashboard/dash_1.js")}}></script>
+<script src={{asset("plugins/bootstrap-touchspin/custom-bootstrap-touchspin.js")}} ></script>
 </body>
 </html>

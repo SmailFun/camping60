@@ -1,6 +1,7 @@
 @extends('layouts.appAdmin')
 @section('content')
 
+
     <div id="content" class="main-content">
 
         <div class="container">
@@ -10,12 +11,13 @@
                 <div id="basic" class="col-lg-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
 
-                        <form method="POST" id="a1" name="a1" action="{{ route('galeryup',$data->id) }}"
+
+                        <form method="POST" id="a1" name="a1" action="{{ route('galeryup',$photo['id']) }}"
                               enctype="multipart/form-data">
+                            @csrf
                         </form>
                         <div id="fs2Tagging" class="col-lg-12 layout-spacing">
                             <div class="widget-header">
-
 
                                 <div class="container">
 
@@ -39,7 +41,7 @@
                                             </div>
 
                                             <img width="250" height="200"
-                                                 src="{{asset('storage/'.$data->photo)}}">
+                                                 src="{{asset('storage/'.$photo['photo'])}}">
 
                                             <div class="row">
                                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -53,9 +55,9 @@
 
                                             <select class="js-example-basic-multiple" name="cat_id" multiple="multiple"
                                                     form="a1">
-                                                @foreach($categories as $el)
-                                                    <option value="{{ $el-> id }}">
-                                                        {{ $el-> category }}
+                                                @foreach($data as $el)
+                                                    <option value="{{ $el['id']}}">
+                                                        {{ $el['category'] }}
                                                     </option>
                                                 @endforeach
                                             </select>
@@ -66,9 +68,14 @@
                             </div>
                             <button type="submit" class="mt-4 mb-4 btn btn-primary" form="a1"> отправить</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                        @endsection
+@endsection
                         @section('style')
                             <link href={{asset("styleB/bootstrap/css/bootstrap.min.css")}} rel="stylesheet"
                                   type="text/css"/>

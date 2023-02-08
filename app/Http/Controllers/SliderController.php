@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SliderRequest;
+use App\Mail\OrderShipped;
+use App\Models\Contact;
 use App\Models\Galery;
 use App\Models\Slider;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -39,6 +42,9 @@ class SliderController extends Controller
         Storage::disk('public')->put('/images', $request['photo']);
 
         $data->save();
+
+        Mail::to('example@yandex.com')->send(new OrderShipped());
+
         return view('adminSlider', ['data'=>Slider::all()]);
 
 

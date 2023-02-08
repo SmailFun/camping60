@@ -13,9 +13,9 @@ class DiogramController extends Controller
     {
 
         $data  = new Diogram();
-        $data ['name'] = $request->name;
-        $data ['email'] = $request->email;
-        $data ['tel'] = ($request->tel);
+        $data ['textBig'] = $request->textBig;
+        $data ['textPre'] = $request->textPre;
+        $data ['dio1'] = ($request->dio1);
         $data ['dio2'] = ($request->dio2);
         $data ['dio3'] = ($request->dio3);
         $data ['dio4'] = ($request->dio4);
@@ -27,7 +27,6 @@ class DiogramController extends Controller
     }
     public function dedit($id)
     {
-
 
         $diogram = new Diogram();
 
