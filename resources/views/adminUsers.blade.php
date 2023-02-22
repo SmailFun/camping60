@@ -18,77 +18,37 @@
                                         <div class="email">
                                             <h4>Email</h4>
                                         </div>
-                                        <div class="user-location">
-                                            <h4 style="margin-left: 3px;">Тема обращения</h4>
-                                        </div>
-                                        <div class="user-phone">
-                                            <h4 style="margin-left: 0;">Телефон</h4>
-                                        </div>
-                                        <div class="redact">
-                                            <h4 style="margin-left: 3px;">Сообщение</h4>
+                                        <div class="email">
+                                            <h4>Телефон</h4>
                                         </div>
                                         <div class="redact">
                                             <h4 style="margin-left: 3px;">Редактировать</h4>
                                         </div>
-
                                     </div>
                                 </div>
                                 @foreach($data as $el)
-
                                     <div class="items">
                                         <div class="item-content">
-                                            <form method="post" name="aaa" id="aaa" action="{{route('newUser')}}">
+
                                             <div class="user-location">
-
                                                 <div class="name">
-
-                                                        @csrf
                                                     <input type="hidden" form="aaa" name="name" value="{{$el->name}}">
                                                     <p  class="name">{{$el->name}}</p>
-
                                                 </div>
-
                                             </div>
                                             <div class="user-email">
                                                 <p class="info-title">Email: </p>
                                                 <input type="hidden" form="aaa" name="email" value="{{$el->email}}">
                                                 <p class="usr-email-addr">{{$el->email}}</p>
-                                            </div></form>
-                                            <div class="user-location">
-                                                <p class="info-title">Тема: </p>
-                                                <p class="usr-location">{{$el->department}}</p>
+
                                             </div>
-                                            <div class="user-phone">
-                                                <p class="info-title">Phone: </p>
+                                            <div class="user-tel">
+                                                <p class="info-title"></p>
                                                 <input type="hidden" form="aaa" name="tel" value="{{$el->tel}}">
-                                                <p class="usr-ph-no">{{$el->tel}}</p>
-                                            </div>
-                                            <div class="user-mes">
-                                                <p class="message"></p>
-                                                <p class="usr-ph-no">{{$el->message}}</p>
-                                            </div>
-                                            <div class="action-btn">
-                                                <a href="{{route('newUser')}}" ><button type="submit" form="aaa">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                     xmlns:serif="http://www.serif.com/"
-                                                     xmlns:xlink="http://www.w3.org/1999/xlink" height="25"
-                                                     stroke-width="2"
-                                                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-                                                     version="1.1" viewBox="0 0 32 32" width="25" xml:space="preserve"><path
-                                                        d="M22.001,18.014c0,-1.657 -1.343,-3 -3,-3c-1.742,0 -4.257,0 -6,0c-1.656,0 -3,1.343 -3,3l0,5.986c0,0.552 0.448,1 1,1l10,0c0.553,0 1,-0.448 1,-1l0,-5.986Z"/>
-                                                    <path
-                                                        d="M23.772,17.014c0.149,0.542 0.229,1.118 0.229,1.715l0,6.842c0,0.51 -0.097,0.994 -0.272,1.429l6.271,0c0.552,0 1,-0.448 1,-1l-0,-5.986c-0,-1.657 -1.343,-3 -3,-3l-4.228,0Z"/>
-                                                    <path
-                                                        d="M8.23,17.014l-4.23,0c-0.796,0 -1.559,0.316 -2.121,0.879c-0.563,0.562 -0.879,1.325 -0.879,2.121l-0,5.986c-0,0.552 0.448,1 1,1l6.274,0c-0.175,-0.435 -0.273,-0.919 -0.273,-1.429l0,-6.842c0,-0.597 0.081,-1.173 0.229,-1.715Z"/>
-                                                    <circle cx="7" cy="11.002" r="4"/>
-                                                    <circle cx="16.001" cy="9.002" r="4"/>
-                                                    <circle cx="25" cy="11.002" r="4"/>
-                                                </svg>
-                                                    </button>
-                                                </a>
+                                                <p class="usr-tell">{{$el->tel}}</p>
 
-
-                                                <a href="{{route('delete',$el->id)}}"><button>
+                                            </div>
+                                                <a href="{{route('deleteUser',$el->id)}}"><button>
                                                     <svg xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:serif="http://www.serif.com/"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" height="24"

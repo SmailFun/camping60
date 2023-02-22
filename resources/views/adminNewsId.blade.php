@@ -21,7 +21,7 @@
 
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
-                                        <form method="post" id="asd" name="a1" action="{{route('newsup',$data->id) }}"  enctype="multipart/form-data">
+                                        <form method="get" id="asd" name="a1" action="{{route('newsup',$data->id) }}"  enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-group">
                                                 <label for="t-text" class="sr-only">Text</label>

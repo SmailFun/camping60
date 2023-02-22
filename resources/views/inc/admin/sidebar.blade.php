@@ -41,16 +41,7 @@
                     </a>
                     <ul class="collapse submenu list-unstyled" id="dashboard" data-parent="#accordionExample">
                         <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
-                            <a href=> Главная странциа </a>
-                        </li >
-                        <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
-                            <a href="#"> Инкубирование </a>
-                        </li>
-                        <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
-                            <a href="#"> Контакты </a>
-                        </li>
-                        <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
-                            <a href="#"> Общие настройки </a>
+                            <a href="/sale"> Категории и цены </a>
                         </li>
                         <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
                             <a href="#"> СЭО </a>
@@ -156,8 +147,8 @@
                 </li>
 
                 <li class="menu">
-                    <a href="#contact" data-toggle="collapse" aria-expanded="{{ (request()->is('contact*')) ? 'true' : '' }}" class="dropdown-toggle">
-                        <div class="#contact">
+                    <a href="#contact" data-toggle="collapse" aria-expanded="{{ (request()->is('contact/*')) ? 'true' : '' }}" class="dropdown-toggle">
+                        <div class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                  fill="none"
                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -225,8 +216,12 @@
                             <a href="/clients"> Заявки </a>
                         </li>
                         <li>
-                            <a href=""> Пользователи </a>
+                            <a href="/clients/user"> Пользователи </a>
                         </li>
+                        <li>
+                            <a href="/clients/order"> Заказы </a>
+                        </li>
+
 
 
                     </ul>

@@ -54,7 +54,7 @@ class NewsController extends Controller
         return Redirect::to('/news');
     }
 
-    public function deleteNews($id, Request $request)
+    /*public function deleteNews($id, Request $request)
     {
 
         $delete = News::find($id);
@@ -65,5 +65,12 @@ class NewsController extends Controller
 
 
 
+    }*/
+    public function deleteNews(News $id, Request $request)
+    {
+        Storage::disk('public')->delete('/images', $id->id);
+        $id->delete();
+
+        return \redirect()->back();
     }
 }

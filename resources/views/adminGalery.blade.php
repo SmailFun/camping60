@@ -76,7 +76,8 @@
 
                                                     @csrf
                                                     <div class="widget-content widget-content-area">
-
+                                                        <div class="row">
+                                                            <div class="widget-content widget-content-area">
                                                         <select class="js-example-basic-multiple" name="cat_id"
                                                                 multiple="multiple" form="a1">
                                                             @foreach($categories as $el)
@@ -85,6 +86,8 @@
                                                                 </option>
                                                             @endforeach
                                                         </select>
+                                                            </div>
+                                                        </div>
                                                     </div>
 
                                                 </div>

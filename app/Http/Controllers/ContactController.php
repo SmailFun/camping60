@@ -22,7 +22,6 @@ class ContactController extends Controller
 
        $data->save();
 
-       Mail::to('example@yandex.com')->send(new OrderShipped());
 
        return Redirect::to('/contacts');
    }

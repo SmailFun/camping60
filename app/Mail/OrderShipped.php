@@ -16,14 +16,15 @@ class OrderShipped extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $pas;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($pas)
     {
-        //
+        $this->pas =$pas;
     }
 
     /**
@@ -63,8 +64,9 @@ class OrderShipped extends Mailable
     public function build()
     {
         return $this->from('example@example.com', 'Example')
+            ->to('123@1')
             ->view('layouts.mail')->with([
-                'name'=> '',
+                'pas' => $this->pas,
             ]);
     }
 

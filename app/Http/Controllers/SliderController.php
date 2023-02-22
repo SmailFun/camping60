@@ -43,22 +43,15 @@ class SliderController extends Controller
 
         $data->save();
 
-        Mail::to('example@yandex.com')->send(new OrderShipped());
 
         return view('adminSlider', ['data'=>Slider::all()]);
-
-
-
 
     }
     public function edit($id)
     {
-
-
         $slider = new Slider();
 
         return view('adminSliderId',['data'=>$slider->find($id)]);
-
     }
 
     public function formedit ($id, SliderRequest $request)
@@ -93,9 +86,7 @@ class SliderController extends Controller
 
     }
 
-    public function ddddddd(Request $request){
-        dd(123);
-    }
+
 
 
 }

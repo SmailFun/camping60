@@ -15,32 +15,6 @@
         </ul>
         <ul class="navbar-item flex-row navbar-dropdown">
 
-            <li class="nav-item dropdown message-dropdown">
-
-                <div class="dropdown-menu p-0 position-absolute" aria-labelledby="messageDropdown">
-                    <div class="">
-                        <a class="dropdown-item">
-                            <div class="">
-
-                                <div class="media">
-                                    <div class="user-img">
-                                        <div class="avatar avatar-xl">
-                                            <span class="avatar-title rounded-circle">OG</span>
-                                        </div>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="">
-                                            <h5 class="usr-name">Oscar Garner</h5>
-                                            <p class="msg-title">ACCOUNT UPDATE</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </li>
 
 
             <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
@@ -53,7 +27,7 @@
                         <div class="media mx-auto">
                             <img src={{asset("assets/img/90x90.jpg")}} class="img-fluid mr-2" alt="avatar">
                             <div class="media-body">
-                                <h5>Admin</h5>
+                                <h5>Юзер</h5>
                                 <p>Project Leader</p>
                             </div>
                         </div>

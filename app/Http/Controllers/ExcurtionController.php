@@ -37,9 +37,13 @@ class ExcurtionController extends Controller
         $data = Excurtion::find($id);
         $data['textUp'] = $request->input('textUp');
         $data ['textDown'] = $request->input('textDown');
-        $data ['photo'] =
-            Storage::disk('public')->put('/images', $request['photo']);
-
+        if($request['photo']){
+            if($request['photo']!=$data['photo']){
+                Storage::disk('public')->delete('/images', $data['photo']);
+                $data ['photo'] =
+                    Storage::disk('public')->put('/images', $request['photo']);
+            }
+        }
         $data->save();
 
         return view('adminExcurtion');
