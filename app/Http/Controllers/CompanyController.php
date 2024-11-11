@@ -50,7 +50,7 @@ class CompanyController extends Controller
 
         $data->save();
 
-        return Redirect::to('/company');
+        return Redirect::to('/mp/company');
     }
 
     public function deleteCompany($id, Request $request)

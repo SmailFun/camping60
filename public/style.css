@@ -2243,6 +2243,8 @@ figure a .text-overlay .info span {
 .services .icon {
     padding: 0;
     margin-bottom: 20px;
+    margin-top: 60px;
+
 }
 .services .icon img {
     height: 80px;

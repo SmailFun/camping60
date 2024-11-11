@@ -20,7 +20,7 @@ class VideoController extends Controller
         $data  = new Video();
         $data['textUp'] = $request->textUp;
         $data ['video'] =
-            Storage::disk('public')->put('/images', $request['video']);
+            Storage::disk('public')->put('/video', $request['video']);
         $data->save();
 
         return back();

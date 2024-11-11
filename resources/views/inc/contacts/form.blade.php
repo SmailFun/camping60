@@ -2,7 +2,7 @@
     <div class="container inner">
         <div class="thin">
             <h2 class="post-title">обратная связь</h2>
-            <p>Отправьте заполненную фотку для рассмотрения сотрудничетсва.</p>
+            <p>Отправьте заполненную форму для рассмотрения обращения или заявки для сотрудничетсва.</p>
             <div class="divide10"></div>
             <div class="form-container">
                 <form action="{{route('contactico')}}" method="post" class="vanilla vanilla-form" name="CotactUs" >
@@ -29,7 +29,7 @@
                         <div class="col-sm-6">
                             <div class="form-field">
                                 <label>
-                                    <input type="tel" name="tel"  placeholder="Номер телефона">
+                                    <input type="tel" name="tel"  placeholder="Номер телефона" required="required">
                                     <i class="icon-phone"></i></label>
                             </div>
                             <!--/.form-field -->
@@ -39,9 +39,8 @@
                             <div class="form-field">
                                 <label class="custom-select">
                                     <select  name="department" required="required">
-                                        <option value="">Выберите тему</option>
-                                        <option value="Сотрудничество">Сотрудничество</option>
-                                        <option value="Поддержка">Поддержка</option>
+                                        <option value="Сотрудничество">Обращение</option>
+                                        <option value="Поддержка">Сотрудничество</option>
 
                                     </select>
                                     <i class="icon-ok"></i><span><!-- fake select handler --></span> </label>

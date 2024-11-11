@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href={{asset("style/images/fav.svg")}}>
+    <link rel="shortcut icon" href={{asset("style/images/logo.svg")}}>
     <title> @yield('tittle') </title>
     <!-- Bootstrap core CSS -->
     <link href={{asset("style/css/bootstrap.min.css")}} rel="stylesheet">

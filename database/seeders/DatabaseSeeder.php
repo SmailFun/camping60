@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
     {
 
         Slider::factory(5)->create();
-       // User::factory(5)->create();
+        User::factory(5)->create();
 
     }
 }

@@ -282,7 +282,7 @@
   justify-content: space-between; }
   .invoice-totals-row .invoice-summary-label {
     min-width: 130px;
-    min-width: 60px;
+    min-width: 80px;
     font-size: 14px;
     color: #888ea8; }
   .invoice-totals-row .invoice-summary-value {

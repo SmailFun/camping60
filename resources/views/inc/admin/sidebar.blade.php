@@ -4,7 +4,7 @@
         <nav id="sidebar">
             <ul class="navbar-nav theme-brand flex-row  text-center">
                 <li class="nav-item theme-text">
-                    <a href="/admin" class="nav-link"> BRANKO </a>
+                    <a href="/admin" class="nav-link"> CAMPING </a>
                 </li>
                 <li class="nav-item toggle-sidebar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -41,10 +41,7 @@
                     </a>
                     <ul class="collapse submenu list-unstyled" id="dashboard" data-parent="#accordionExample">
                         <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
-                            <a href="/sale"> Категории и цены </a>
-                        </li>
-                        <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
-                            <a href="#"> СЭО </a>
+                            <a href="/sale"> Номера и цены </a>
                         </li>
                         <li class="{{ (request()->is('admin/*')) ? 'active' : '' }}">
                             <a href="#"> Настройки писем </a>
@@ -92,10 +89,7 @@
                             <a href="/mp/anim"> Анимированный текст </a>
                         </li>
                         <li class="{{ (request()->is('mp/excurtion/*')) ? 'active' : '' }}">
-                            <a href="/mp/excurtion"> Экскурсия </a>
-                        </li>
-                        <li class="{{ (request()->is('mp/galery/*')) ? 'active' : '' }}">
-                            <a href="/mp/galery"> Галерея </a>
+                            <a href="/mp/excurtion"> План </a>
                         </li>
                         <li class="{{ (request()->is('mp/video/*')) ? 'active' : '' }}">
                             <a href="/mp/video"> Видео </a>
@@ -113,72 +107,7 @@
                     </ul>
                 </li>
 
-                <li class="menu">
-                    <a href="#incub" data-toggle="collapse" aria-expanded="{{ (request()->is('incub*')) ? 'true' : '' }}" class="dropdown-toggle">
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="feather feather-clipboard">
-                                <path
-                                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                            </svg>
-                            <span>Инкубирование</span>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="feather feather-chevron-right">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="collapse submenu list-unstyled" id="incub" data-parent="#accordionExample">
-                        <li>
-                            <a href="/"> Верхняя картинка </a>
-                        </li>
-                        <li>
-                            <a href="/"> Текст </a>
-                        </li>
 
-                    </ul>
-                </li>
-
-                <li class="menu">
-                    <a href="#contact" data-toggle="collapse" aria-expanded="{{ (request()->is('contact/*')) ? 'true' : '' }}" class="dropdown-toggle">
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="feather feather-clipboard">
-                                <path
-                                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                            </svg>
-                            <span>Контакты</span>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="feather feather-chevron-right">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul class="collapse submenu list-unstyled" id="contact" data-parent="#accordionExample">
-                        <li>
-                            <a href=""> Карта </a>
-                        </li>
-                        <li>
-                            <a href=""> Форма </a>
-                        </li>
-
-
-                    </ul>
-                </li>
 
                 <li class="menu menu-heading">
                     <div class="heading">
@@ -213,13 +142,13 @@
                     </a>
                     <ul class="collapse submenu list-unstyled" id="contacts" data-parent="#accordionExample">
                         <li class="{{ (request()->is('clients/*')) ? 'active' : '' }}">
-                            <a href="/clients"> Заявки </a>
+                            <a href="/clients"> Обращение пользователей </a>
                         </li>
                         <li>
                             <a href="/clients/user"> Пользователи </a>
                         </li>
                         <li>
-                            <a href="/clients/order"> Заказы </a>
+                            <a href="/clients/order"> Бронирования </a>
                         </li>
 
 

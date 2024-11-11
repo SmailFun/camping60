@@ -219,10 +219,10 @@
   width: 110px; }
 
 .invoice-detail-items tbody td.amount {
-  width: 60px; }
+  width: 80px; }
 
 .invoice-detail-items tbody td.tax {
-  width: 60px; }
+  width: 80px; }
   .invoice-detail-items tbody td.tax .new-chk-content {
     display: none; }
 
@@ -263,9 +263,9 @@
 
 /* Detail Total -> invoice-totals-row */
 .totals-row {
-  max-width: 9rem;
+  max-width: 10rem;
   margin-left: auto;
-  margin-right: 60px; }
+  margin-right: 80px; }
 
 .invoice-totals-row {
   display: -webkit-box;
@@ -281,12 +281,12 @@
   -ms-flex-pack: justify;
   justify-content: space-between; }
   .invoice-totals-row .invoice-summary-label {
-    min-width: 130px;
-    min-width: 60px;
+    min-width: 200px;
+    min-width: 90px;
     font-size: 14px;
     color: #888ea8; }
   .invoice-totals-row .invoice-summary-value {
-    min-width: 60px;
+    min-width: 90px;
     text-align: right;
     font-size: 14px;
     color: #515365;

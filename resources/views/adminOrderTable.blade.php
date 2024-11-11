@@ -16,13 +16,10 @@
                                             <h4  style="margin-left: 5px;">Категория товара</h4>
                                         </div>
                                         <div class="column">
-                                            <h4  style="margin-left: 5px;">Колличество</h4>
+                                            <h4  style="margin-left: 5px;">Колличество гостей</h4>
                                         </div>
                                         <div class="column">
                                             <h4  style="margin-left: 5px;">Сумма заказа</h4>
-                                        </div>
-                                        <div class="column">
-                                            <h4 style="margin-left: 5px;">Адресс доставки</h4>
                                         </div>
                                         <div class="column">
                                             <h4 style="margin-left: 5px;">Номер телефона</h4>
@@ -32,6 +29,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                               {{--  @foreach($data as $el)
 
                                     <div class="items">

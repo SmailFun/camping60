@@ -37,7 +37,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::middleware(['auth'])->group(function () {
 Route::get('/admin', function () {
     return view('admin');
 });
@@ -94,14 +94,6 @@ Route::post('/mp/excurtion/{id}/update', [ExcurtionController::class, 'excurtion
 Route::get('/mp/excurtion/{id}/delete', [ExcurtionController::class, 'deleteExcurtion'])->name('deleteexcurtion');
 
 
-/*Route::get('/galery', function () {
-    return view('adminGalery', );
-});*/
-Route::get('/mp/galery', [GaleryController::class, 'index'])->name('galeryphonk');
-Route::get('/mp/galery/{id}', [GaleryController::class, 'galedit'])->name('galeryid');
-Route::post('/mp/galery/{id}/update', [GaleryController::class, 'gqedit'])->name('galeryup');
-Route::get('/mp/galery/{id}/delete', [GaleryController::class, 'deletephot'])->name('deleteaph');
-Route::get('/mp/galery/{id}/delete1', [GaleryController::class, 'deletepcat'])->name('deletecat');
 
 Route::get('/mp/video', function () {
     return view('adminVideo', ['data' => Video::all()]);
@@ -135,7 +127,7 @@ Route::get('/mp/diogram', function () {
 Route::get('/mp/diogram/{id}', [DiogramController::class, 'dedit'])->name('diogramid');
 Route::post('/mp/diogram/{id}/update', [DiogramController::class, 'diogramedit'])->name('diogramup');
 Route::get('/mp/diogram/{id}/delete', [DiogramController::class, 'deleteDiogram'])->name('deletediogram');
-
+});
 
 Route::get('/', function () {
     return view('main', [
@@ -149,9 +141,23 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/smolenka', function () {
+    return view('sosnovo');
+});
 
-Route::get('/incubation', function () {
-    return view('incub');
+Route::get('/contactsSosnovo', function () {
+    return view('contacts');
+});
+Route::get('/pskovhouse', function () {
+    return view('pskovhouse');
+});
+
+
+Route::get('/booking', function () {
+    return view('booking');
+});
+Route::get('/coffee', function () {
+    return view('coffee');
 });
 Route::get('/contacts', function () {
     return view('contacts');

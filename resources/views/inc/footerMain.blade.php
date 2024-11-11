@@ -2,21 +2,21 @@
         <div class="container inner">
             <div class="row">
                 <div class="col-sm-4">
-                    <h3 class="section-title widget-title"><img srcset="style/images/logo.svg 5x"></h3>
-                    <p>Более 45 лет занимаемся специальным сектором сельского хозяйства, разведением индейки, распространением инкубационных яиц индейки и суточных индюшат.</p>
+                    <h3 class="section-title widget-title"><img srcset="style/images/logo.svg" style="height: 200px"></h3>
+                    <p>Открой приключения – твой мир в кемпинге.</p>
 
                 </div>
 
                 <div class="widget">
                     <h3 class="section-title widget-title">Связаться</h3>
-                    <p>ООО «Бранко Рус»</p>
+                    <p>ООО «АВАНТА ИНВЕСТ»</p>
                     <div class="contact-info">
-                        <i class="icon-location"></i>422060, респ. Татарстан, пгт. Богатые Сабы, ул. Заводская, д. 19
+                        <i class="icon-location"></i>181350, Псковская обл., Островский р-н, г. Остров, ул. Загородная,
                         <br>
-                        <i class="icon-phone"></i>+7 927 039 71 17
+                        <i class="icon-phone"></i>+7 (495) 119-7-660
                         <br>
                         <i class="icon-mail"></i>
-                        <a href="mailto:sales@brankorus.ru">sales@brankorus.ru</a>
+                        <a href="mailto:info@avantainvest.com">info@avantainvest.com</a>
                     </div>
                 </div>
 
@@ -24,11 +24,12 @@
             <!-- /.row -->
 
             <hr />
-            <p class="copyright pull-left">© ООО «Бранко Рус», 2021. Coded by <a href="http://it-pskov.ru/">ItNova</a></p>
+            <p class="copyright pull-left">© ООО «АВАНТА ИНВЕСТ», 2023. Coded by <a href="">NikS</a></p>
             <ul class="footer-menu pull-right">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Инкубирование</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/booking">Бронировать</a></li>
+                <li><a href="/coffee">Кафе</a></li>
+                <li><a href="/contacts">Контакты</a></li>
                 <li><a href="/login">Войти</a></li>
             </ul>
         </div>

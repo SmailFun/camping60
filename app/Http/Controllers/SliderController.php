@@ -70,18 +70,18 @@ class SliderController extends Controller
 
         $data->save();
 
-        return \redirect()->back();
+        return Redirect::to('/mp/slider');
     }
 
     public function deleteForm($id, Request $request)
     {
 
-        $delete =        Slider::find($id);
+        $delete = Slider::find($id);
         Storage::disk('public')->delete('/images', $delete['photo']);
         $delete->delete();
 
 
-        return Redirect::to('/slider');
+        return Redirect::to('/mp/slider');
 
 
     }

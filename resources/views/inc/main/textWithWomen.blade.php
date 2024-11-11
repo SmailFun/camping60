@@ -8,7 +8,7 @@
                 </div>
                 <div class="divide30"></div>
                 <figure>
-                    <img style="width: auto;" src="storage/{{($el-> photo)}}" alt="">
+                    <img style="width: auto;" src="{{asset('storage/'.$el-> photo)}}" alt="">
                 </figure>
             </div>
             @endforeach

@@ -1,7 +1,7 @@
 @extends('layouts.appMain')
 
 @section('tittle')
-    Branko
+    Campig60
 @endsection
 @section('contentMain')
     <div>
@@ -9,11 +9,9 @@
         @include('inc.main.sliderMainPage')
         @include('inc.main.animatedText')
         @include('inc.main.textWithWomen')
-        <div class="light-wrapper">
-            @include('inc.main.photoGalery')
-        </div>
         @include('inc.main.video')
-        @include('inc.main.news')
+{{--        @include('inc.main.news')--}}
+        @include('inc.main.showplace')
         @include('inc.main.aboutCompanyMain')
         @include('inc.main.modelProcess')
     </div>
